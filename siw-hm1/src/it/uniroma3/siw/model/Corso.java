@@ -5,13 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 
 @Entity
-@NamedQuery(name = "findAllCourse", query = "SELECT p FROM Corso p")
+
 public class Corso{
 
 	@Id
@@ -27,6 +29,9 @@ public class Corso{
 
 	@Column
 	private String durataInMesi;
+	
+	@OneToMany(mappedBy="corso")
+	private List<Docente> docenti;
 	
 	public Corso() {
 	}

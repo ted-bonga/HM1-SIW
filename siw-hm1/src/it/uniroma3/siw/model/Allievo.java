@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 
 @Entity
-@NamedQuery(name = "findAllAllievi", query = "SELECT a FROM Allievo a")
+
 public class Allievo{
 
 	@Id
