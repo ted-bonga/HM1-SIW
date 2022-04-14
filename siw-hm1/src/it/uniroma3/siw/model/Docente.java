@@ -1,6 +1,7 @@
 package it.uniroma3.siw.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,7 +38,7 @@ public class Docente{
 	@Column
 	private String partitaIVA;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Corso corso;
 
 
