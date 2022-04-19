@@ -13,6 +13,15 @@ import it.uniroma3.siw.model.Allievo;
 import it.uniroma3.siw.model.Corso;
 import it.uniroma3.siw.model.Docente;
 
+/**
+ * 
+ * @author tedbonga
+ * homework 1 siw
+ * matricola 546569
+ *
+ */
+
+
 public class ProductMain {
 
 	public static void main(String[] args) {
