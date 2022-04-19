@@ -11,6 +11,7 @@ import javax.persistence.NamedQuery;
 import java.sql.Date;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 @Entity
@@ -38,22 +39,30 @@ public class Docente{
 	@Column
 	private String partitaIVA;
 	
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.LAZY, cascade= {CascadeType.PERSIST,CascadeType.REMOVE})
 	private Corso corso;
+	
+	
 
 
 
 
 
-	public Docente(Long id, String name, String cognome, LocalDate dateOfBirth, String luogoDiNascita,
+	public Docente(String name, String cognome, LocalDate dateOfBirth, String luogoDiNascita,
 			String partitaIVA) {
 		super();
-		this.id = id;
+
 		this.name = name;
 		this.cognome = cognome;
 		this.dateOfBirth = dateOfBirth;
 		this.luogoDiNascita = luogoDiNascita;
 		this.partitaIVA = partitaIVA;
+	}
+	public Corso getCorso() {
+		return corso;
+	}
+	public void setCorso(Corso corso) {
+		this.corso = corso;
 	}
 	public void setId(Long id) {
 		this.id = id;

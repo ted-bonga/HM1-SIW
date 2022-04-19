@@ -8,6 +8,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -25,7 +26,7 @@ public class Corso{
 
 
 	@Column
-	private Date dataInizio;
+	private LocalDate dataInizio;
 
 	@Column
 	private String durataInMesi;
@@ -36,7 +37,7 @@ public class Corso{
 	public Corso() {
 	}
 
-	public Corso(String name,Date dataInizio, String durataInMesi) {
+	public Corso(String name,LocalDate dataInizio, String durataInMesi) {
 		this.name = name;
 		this.dataInizio=dataInizio;
 		this.durataInMesi=durataInMesi;

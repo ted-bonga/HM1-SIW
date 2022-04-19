@@ -46,9 +46,8 @@ public class Società{
 
 
 
-	public Società(Long id, String ragioneSociale, String indirizzo, String numeroCivico, String comune, String cap,
+	public Società(String ragioneSociale, String indirizzo, String numeroCivico, String comune, String cap,
 			String provincia, String numeroDiTelefono) {
-		this.id = id;
 		this.ragioneSociale = ragioneSociale;
 		this.indirizzo = indirizzo;
 		this.numeroCivico = numeroCivico;
